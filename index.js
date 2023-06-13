@@ -10,7 +10,7 @@ app.get("/userdata",async(req,res)=>{
     }
     catch(err){
         res.status(404).send("404 Error Occur")
-        console.log(err)
+        throw err
     }
 
 })
@@ -22,7 +22,7 @@ app.post("/userdata",async(req,res)=>{
     }
     catch(err){
         res.send("400 Error Occur")
-        console.log(err)
+        throw err
     }
 
 })

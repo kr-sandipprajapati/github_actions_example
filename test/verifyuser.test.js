@@ -42,6 +42,8 @@ describe("GET /userdata",function(){
         .end(
             function(err,res){
                 if (err) return err;
+                expect(res.status).to.be.eq(200)
+                expect(res.body).to.be.a('array')            
         
             }
         )
